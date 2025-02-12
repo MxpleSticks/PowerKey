@@ -38,7 +38,7 @@ PowerKey can be configured through:
 - Direct configuration file editing
 - Command line interface
 
-```
+
 
 ## 🤝 Contributing
 
