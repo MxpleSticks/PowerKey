@@ -17,8 +17,8 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 ## 📥 Installation
 
 1. Download the appropriate version for your operating system:
-   - [Windows Download](https://github.com/MxpleSticks/PowerKey/releases/latest/download/PowerKey-Windows.zip)
-   - [macOS Download](https://github.com/MxpleSticks/PowerKey/releases/latest/download/PowerKey-Mac.zip)
+   - [Windows Download](https://github.com/user-attachments/files/18775243/superkey.zip)
+   - [macOS Download](https://github.com/user-attachments/files/18775291/MacSuperkey.zip)
 
 2. Extract the downloaded file
 3. Run the application
@@ -27,7 +27,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 ## 🛠️ Usage
 
 1. Launch PowerKey
-2. Press `Ctrl+Shift+Alt` + your configured key to trigger actions
+2. Press `Ctrl+Shift+Alt` or `Cmd+Shift+Option` + your configured key to trigger actions
 3. Access settings through the system tray icon
 4. Create new shortcuts via the intuitive GUI
 
