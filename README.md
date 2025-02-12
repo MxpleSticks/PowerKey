@@ -58,4 +58,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to all contributors who have helped shape PowerKey
 - Special thanks to the open-source community
-- Icons provided by [Lucide Icons](https://lucide.dev)
+- 3d assets for Website by [Spline](https://spline.design/)
+- Icons provided by [Icons8](https://icons8.com/)
