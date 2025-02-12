@@ -646,13 +646,11 @@
                         <p>Select the version that matches your operating system</p>
                         <div class="button-container">
                             <button class="popup-button windows" onclick="downloadFile('windows')">
-                                <img src="windows.png" alt="Windows Logo"
-                                    class="button-icon">
+                                <img src="windows.png" alt="Windows Logo" class="button-icon">
                                 Download for Windows
                             </button>
                             <button class="popup-button mac" onclick="downloadFile('mac')">
-                                <img src="mac.png"
-                                    alt="macOS Logo" class="button-icon">
+                                <img src="mac.png" alt="macOS Logo" class="button-icon">
                                 Download for macOS
                             </button>
                         </div>
@@ -701,9 +699,9 @@
             // Replace these with your actual download links
             let downloadLink;
             if (os === 'windows') {
-                downloadLink = 'your_windows_download_link_here'; // Replace with the actual link
+                downloadLink = 'https://raw.githubusercontent.com/MxpleSticks/PowerKey/main/windowsApp.py';
             } else if (os === 'mac') {
-                downloadLink = 'your_mac_download_link_here'; // Replace with the actual link
+                downloadLink = 'https://raw.githubusercontent.com/MxpleSticks/PowerKey/main/macApp.py';
             } else {
                 return; // Do nothing if os is not valid
             }
