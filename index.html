@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerKey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --purple-accent: #8B5CF6;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        :root {
+            --purple-accent: #8B5CF6;
+        }
+
+        /* Add new container styles */
+        .fixed-container {
+            width: 1880px;
+            /* Standard desktop width */
+            margin: 0 auto;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .outer-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            min-height: 100vh;
+        }
+
+        /* Add scaling functionality */
+        @media screen and (max-width: 1440px) {
+            .fixed-container {
+                transform-origin: top center;
+                transform: scale(calc(100vw / 1440));
+                height: calc(100vh * (1440 / 100vw));
+            }
+        }
+
+        /* Rest of your existing styles */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ffffff, var(--purple-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+            top: -200px;
+            /* Distance from the top of the nearest positioned ancestor */
+            left: 310px;
+            /* Distance from the left of the nearest positioned ancestor */
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .glass-card {
+            backdrop-filter: blur(10px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .glass-card:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .separator {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 40px 0;
+        }
+
+        .iframe-container {
+            position: relative;
+        }
+
+        .iframe-separator {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 140vw;
+            transform: translateX(-50%);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .Btn {
+            width: 140px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to right, #8B5CF6, #A78BFA, #8B5CF6, #8B5CF6, #A78BFA, #8B5CF6);
+            background-size: 250%;
+            background-position: left;
+            color: #A78BFA;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition-duration: 1s;
+            overflow: hidden;
+        }
+
+        .Btn::before {
+            position: absolute;
+            content: attr(data-text);
+            color: #A78BFA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 97%;
+            height: 90%;
+            border-radius: 8px;
+            transition-duration: 1s;
+            background-color: rgba(0, 0, 0, 0.842);
+            background-size: 200%;
+        }
+
+        .Btn:hover {
+            background-position: right;
+            transition-duration: 1s;
+        }
+
+        .Btn:hover::before {
+            background-position: right;
+            transition-duration: 1s;
+        }
+
+        .Btn:active {
+            transform: scale(0.95);
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add blur effect to the navbar */
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the 3D stars container */
+        .stars-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust height as needed */
+            margin-top: -1320px;
+            /* Adjust margin as needed */
+            margin-left: 770px;
+        }
+
+        .stars-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none;
+            /* Ensure the iframe does not interfere with interactions */
+        }
+
+        .donut-container {
+            position: relative;
+            /* Key change: relative positioning */
+            width: 100%;
+            height: 400px;
+            /* Or whatever height you want */
+            margin-top: -650px;
+            /* Adjust as needed */
+            margin-left: -260px;
+            /* Adjust as needed */
+        }
+
+        .donut-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            border: none;
+            pointer-events: none;
+        }
+
+        #downloadPopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            min-width: 320px;
+            max-width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid rgba(255, 255, 255, 0.384);
+        }
+
+        .popup-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 22px;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+            z-index: -1;
+        }
+
+        #downloadPopupContent {
+            text-align: center;
+        }
+
+        #downloadPopupContent h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+
+        #downloadPopupContent p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            /* Increased spacing between buttons */
+        }
+
+        .popup-button {
+            position: relative;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+        }
+
+        .popup-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .popup-button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .popup-button.windows {
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(25, 25, 25, 0.8));
+            border: 2px dashed rgba(255, 255, 255, 0.144);
+        }
+
+        .popup-button.mac {
+            background: linear-gradient(135deg, rgba(35, 35, 35, 0.8), rgba(30, 30, 30, 0.8));
+            border: 2px dashed rgba(255, 255, 255, 0.144);
+        }
+
+
+        .popup-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-button.windows:hover {
+            background: linear-gradient(135deg, rgba(35, 35, 35, 0.8), rgba(30, 30, 30, 0.8));
+            border: 2px dashed rgba(255, 255, 255, 0.144);
+        }
+
+        .popup-button.mac:hover {
+            background: linear-gradient(135deg, rgba(35, 35, 35, 0.8), rgba(30, 30, 30, 0.8));
+            border: 2px dashed rgba(255, 255, 255, 0.144);
+        }
+
+        .popup-button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        #closePopupButton {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #closePopupButton:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .popup-button:active {
+            transform: translateY(0);
+        }
+
+        .button-icon {
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 640px) {
+            .popup-container {
+                min-width: 400px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+        #downloadPopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        #downloadPopup.closing {
+            animation: fadeOut 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="fixed-container">
+            <div class="container mx-auto px-6 flex justify-between items-center">
+                <div class="text-xl font-bold gradient-text fade-in-down" style="animation-delay: 0.2s;">PowerKey</div>
+                <div class="space-x-8">
+                    <a href="#" class="hover:text-purple-400 transition-colors fade-in-down"
+                        style="animation-delay: 0.4s;">Features</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors fade-in-down"
+                        style="animation-delay: 0.6s;">About</a>
+                </div>
+            </div>
+            </nav>
+
+            <main class="min-h-screen">
+                <div class="relative pt-32 pb-20">
+                    <div class="hero-glow"></div>
+                    <div class="container mx-auto px-6 relative z-10">
+                        <div class="flex items-center gap-12">
+                            <div class="w-1/2">
+                                <div class="max-w-xl">
+                                    <h1 class="text-6xl font-bold mb-6 fade-in-up" style="animation-delay: 0.8s;">
+                                        <span class="gradient-text">Power Up Your Workflow with PowerKey</span>
+                                    </h1>
+                                    <p class="text-xl text-gray-400 mb-12 fade-in-up" style="animation-delay: 1s;">
+                                        Boost your productivity with customizable shortcuts using <span
+                                            class="gradient-text">Ctrl+Shift+Alt</span>.
+                                        Create powerful commands in seconds.
+                                    </p>
+                                    <div class="flex gap-6">
+                                        <button id="downloadButton" class="Btn" data-text="Download Now">Download
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-2/3 h-[400px] iframe-container fade-in-up" style="animation-delay: 1.2s;">
+                                <iframe src='https://my.spline.design/strip-edd34db22b401a7700889107c452c2e8/'
+                                    frameborder='0' width='100%' height='100%' style="min-height: 400px;"></iframe>
+                                <div class="iframe-separator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="py-20 bg-black">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-4xl font-bold text-center mb-16 fade-in-up" style="animation-delay: 1.4s;">
+                            <span class="gradient-text">Features</span> that set us apart
+                        </h2>
+                        <div class="grid grid-cols-3 gap-12">
+                            <div class="glass-card fade-in-up" style="animation-delay: 1.6s;">
+                                <div
+                                    class="w-12 h-12 bg-purple-600/20 rounded-xl mb-6 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">Lightning <span class="gradient-text">Fast</span>
+                                </h3>
+                                <p class="text-gray-400">Access any command instantly with customizable keyboard
+                                    shortcuts</p>
+                            </div>
+                            <div class="glass-card fade-in-up" style="animation-delay: 1.8s;">
+                                <div
+                                    class="w-12 h-12 bg-purple-600/20 rounded-xl mb-6 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4"><span class="gradient-text">Easy</span> to Configure
+                                </h3>
+                                <p class="text-gray-400">Set up new shortcuts in seconds with our intuitive interface
+                                </p>
+                            </div>
+                            <div class="glass-card fade-in-up" style="animation-delay: 2s;">
+                                <div
+                                    class="w-12 h-12 bg-purple-600/20 rounded-xl mb-6 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4"><span class="gradient-text">Cross-Platform</span>
+                                </h3>
+                                <p class="text-gray-400">Works seamlessly across Windows, macOS, and Linux</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-20 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-purple-600/5 backdrop-blur-3xl"></div>
+                    <div class="container mx-auto px-6 relative">
+                        <div class="grid grid-cols-4 gap-8 text-center">
+                            <div class="p-8 animate-fade-in" style="animation-delay: 200ms;">
+                                <h4 class="text-4xl font-bold gradient-text mb-2"><span class="gradient-text">1K+</h4>
+                                <p class="text-gray-400">Active Users</p>
+                            </div>
+                            <div class="p-8 animate-fade-in" style="animation-delay: 400ms;">
+                                <h4 class="text-4xl font-bold gradient-text mb-2">500k+</h4>
+                                <p class="text-gray-400">Shortcuts Created</p>
+                            </div>
+                            <div class="p-8 animate-fade-in" style="animation-delay: 600ms;">
+                                <h4 class="text-4xl font-bold gradient-text mb-2">99.9%</h4>
+                                <p class="text-gray-400">Uptime</p>
+                            </div>
+                            <div class="p-8 animate-fade-in" style="animation-delay: 800ms;">
+                                <h4 class="text-4xl font-bold gradient-text mb-2">4.9/5</h4>
+                                <p class="text-gray-400">User Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-20 bg-black">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-4xl font-bold text-center mb-16 fade-in-up" style="animation-delay: 2.2s;">
+                            <span class="gradient-text">Testimonials</span> from our users
+                        </h2>
+                        <div class="grid grid-cols-3 gap-12">
+                            <div class="glass-card fade-in-up" style="animation-delay: 2.4s;">
+                                <p class="text-gray-400 mb-4">"PowerKey has revolutionized the way I work. The
+                                    customizable
+                                    shortcuts save me so much time!"</p>
+                                <h4 class="text-xl font-bold">-<span class="gradient-text"> Emily Carter</span></h4>
+                            </div>
+                            <div class="glass-card fade-in-up" style="animation-delay: 2.6s;">
+                                <p class="text-gray-400 mb-4">"I can't imagine going back to my old workflow. PowerKey
+                                    is a
+                                    game-changer!"</p>
+                                <h4 class="text-xl font-bold">-<span class="gradient-text"> Michael Thompson</span></h4>
+                            </div>
+                            <div class="glass-card fade-in-up" style="animation-delay: 2.8s;">
+                                <p class="text-gray-400 mb-4">"The ease of setting up new shortcuts is amazing. Highly
+                                    recommend
+                                    PowerKey"</p>
+                                <h4 class="text-xl font-bold">-<span class="gradient-text"> Sarah Patel</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add the 3D stars container here -->
+                <section class="py-20 bg-black">
+                    <div class="container mx-auto px-6">
+                        <div class="stars-container">
+                            <iframe src='https://my.spline.design/ai-f841241876d62c64f3baa236edb9da4d/'
+                                class="stars-iframe" frameborder='0'></iframe>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="py-20 bg-black">
+                    <div class="container mx-auto px-6">
+                        <div class="donut-container">
+                            <iframe src='https://my.spline.design/glassdonut-1e3b6916eafab43e6991cea0802ba2a5/'
+                                class="donut-iframe" frameborder='0'></iframe>
+
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <div id="downloadPopup" class="backdrop-blur">
+                <div class="popup-container">
+                    <button id="closePopupButton" onclick="closePopup()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div id="downloadPopupContent">
+                        <h2>Choose Your Platform</h2>
+                        <p>Select the version that matches your operating system</p>
+                        <div class="button-container">
+                            <button class="popup-button windows" onclick="downloadFile('windows')">
+                                <img src="windows.png" alt="Windows Logo"
+                                    class="button-icon">
+                                Download for Windows
+                            </button>
+                            <button class="popup-button mac" onclick="downloadFile('mac')">
+                                <img src="mac.png"
+                                    alt="macOS Logo" class="button-icon">
+                                Download for macOS
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const deltaX = (centerX - x) / 10;
+                const deltaY = (centerY - y) / 10;
+                card.style.transform = `rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+            });
+        });
+
+        const downloadButton = document.getElementById('downloadButton');
+        const downloadPopup = document.getElementById('downloadPopup');
+        const downloadPopupContent = document.getElementById('downloadPopupContent');
+
+        downloadButton.addEventListener('click', () => {
+            downloadPopup.style.display = 'block';
+            downloadPopup.classList.remove('closing'); // Ensure the closing class is removed
+        });
+
+        function closePopup() {
+            downloadPopup.classList.add('closing');
+            setTimeout(() => {
+                downloadPopup.style.display = 'none';
+                downloadPopup.classList.remove('closing'); // Remove the class after the animation
+            }, 300); // Match this duration with the CSS animation duration
+        }
+
+        function downloadFile(os) {
+            // Replace these with your actual download links
+            let downloadLink;
+            if (os === 'windows') {
+                downloadLink = 'your_windows_download_link_here'; // Replace with the actual link
+            } else if (os === 'mac') {
+                downloadLink = 'your_mac_download_link_here'; // Replace with the actual link
+            } else {
+                return; // Do nothing if os is not valid
+            }
+
+            // Create a temporary link and trigger the download
+            const a = document.createElement('a');
+            a.href = downloadLink;
+            a.download = `PowerKey_${os}.zip`; // Or whatever filename you want
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            closePopup(); // Close the popup after download starts (optional)
+        }
+
+        // Close the popup if the user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target == downloadPopup) {
+                closePopup();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
