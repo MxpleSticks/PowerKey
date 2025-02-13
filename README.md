@@ -14,6 +14,10 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 - **Modern UI**: Sleek, dark-themed interface with glass morphism design
 - **Resource Efficient**: Lightweight application with minimal system impact
 
+## 🖥️ Demo
+
+![Demo GIF](https://media.tenor.com/corner-sit-deer-gif-10844181262590199499.gif)
+
 ## 📥 Installation
 
 1. Download the appropriate version for your operating system:
@@ -37,8 +41,6 @@ PowerKey can be configured through:
 - The settings GUI
 - Direct configuration file editing
 - Command line interface
-
-
 
 ## 🤝 Contributing
 
