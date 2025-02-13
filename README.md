@@ -16,7 +16,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ## 🖥️ Demo
 
-![Demo GIF](https://media.tenor.com/corner-sit-deer-gif-10844181262590199499.gif)
+![Demo GIF](https://media.tenor.com/corner-sit-deer-gif-10844181262590199499)
 
 ## 📥 Installation
 
