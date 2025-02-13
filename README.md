@@ -14,9 +14,10 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 - **Modern UI**: Sleek, dark-themed interface with glass morphism design
 - **Resource Efficient**: Lightweight application with minimal system impact
 
-## 🖥️ Demo
+## 🖥️ very very low quality Demo
 
-![Demo GIF](https://tenor.com/view/corner-sit-deer-gif-10844181262590199499)
+![2025-02-12+22-22-00+(2) (1)](https://github.com/user-attachments/assets/d060f068-ddaa-454e-8a27-a78a81594daa)
+
 
 ## 📥 Installation
 
