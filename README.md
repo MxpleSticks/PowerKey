@@ -4,7 +4,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)
-![Version](https://img.shields.io/badge/version-1.1.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.2.1-green.svg)
 
 ## 🚀 Features
 
