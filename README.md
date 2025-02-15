@@ -79,4 +79,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Note
 
-i lost the code to V1.5 because im stupid and didnt save :(
+i lost the code to V1.5 because im stupid and didnt save :( ( Found it :) )
