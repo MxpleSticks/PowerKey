@@ -20,7 +20,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 - **Window Transparency**: Customize window opacity for a seamless workflow  
 - **Enable/Disable Hotkeys**: Toggle specific hotkeys on or off as needed
 
-## 🎬 Video Demo (V1.5.8)  
+## 🎬 Video Demo (V1.5)  
 
 [![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
 
