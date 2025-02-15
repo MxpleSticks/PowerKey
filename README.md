@@ -22,7 +22,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ## 🎬 Video Demo (V1.5)  
 
-[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
+[![Watch the demo](https://img.youtube.com/vi/Joc9YAeQAnU/maxresdefault.jpg)](https://www.youtube.com/watch?v=Joc9YAeQAnU)  
 
 *Click the image above to watch the full demo on YouTube!*  
 
