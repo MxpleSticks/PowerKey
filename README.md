@@ -10,7 +10,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 ## 🚀 Features
 
 ![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)
-![Forks](https://img.shields.io/github/forks/MxpleSticks/PowerKey.svg?style=social)
+![Issues](https://img.shields.io/github/issues/MxpleSticks/PowerKey.svg)
 
 - **Lightning Fast**: Execute commands instantly with customizable keyboard shortcuts
 - **Easy Configuration**: Set up new shortcuts in seconds with an intuitive interface
@@ -40,8 +40,6 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ## 🛠️ Usage
 
-![Issues](https://img.shields.io/github/issues/MxpleSticks/PowerKey.svg)
-
 1. Launch PowerKey
 2. Press `Ctrl+Shift+Alt` or `Cmd+Shift+Option` + your configured key to trigger actions
 3. Access settings through the system tray icon
@@ -55,6 +53,8 @@ PowerKey can be configured through:
 - Command line interface
 
 ## 🤝 Contributing
+
+![Forks](https://img.shields.io/github/forks/MxpleSticks/PowerKey.svg?style=social)
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
