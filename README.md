@@ -76,3 +76,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special thanks to the open-source community  
 - 3D assets for Website by [Spline](https://spline.design/)  
 - Icons provided by [Icons8](https://icons8.com/)  
+
+## Note
+
+i lost the code to V1.5 because im stupid and didnt save :(
