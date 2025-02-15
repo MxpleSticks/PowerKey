@@ -26,7 +26,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 *Click the image above to watch the full demo on YouTube!*  
 
-## 🖥️ very very low quality Demo  
+## 🖥️ very very low quality Demo (V1.0)
 
 ![2025-02-12+22-22-00+(2) (1)](https://github.com/user-attachments/assets/d060f068-ddaa-454e-8a27-a78a81594daa)
 
