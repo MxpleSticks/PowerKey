@@ -2,15 +2,11 @@
 
 A modern, cross-platform hotkey manager that supercharges your workflow with customizable `Ctrl+Shift+Alt` or `Cmd+Shift+Option` shortcuts.  
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)  
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)  
-![Version](https://img.shields.io/badge/version-1.4.1-green.svg)  
-![Stars](https://img.shields.io/github/stars/MxpleSticks/PowerKey.svg?style=social)  
+![License](https://img.shields.io/badge/license-MIT-blue.svg)  ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)  ![Version](https://img.shields.io/badge/version-1.4.1-green.svg)  ![Stars](https://img.shields.io/github/stars/MxpleSticks/PowerKey.svg?style=social)  
 
 ## 🚀 Features  
 
-![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)  
-![Issues](https://img.shields.io/github/issues/MxpleSticks/PowerKey.svg)  
+![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)  ![Issues](https://img.shields.io/github/issues/MxpleSticks/PowerKey.svg)  
 
 - **Lightning Fast**: Execute commands instantly with customizable keyboard shortcuts  
 - **Easy Configuration**: Set up new shortcuts in seconds with an intuitive interface  
