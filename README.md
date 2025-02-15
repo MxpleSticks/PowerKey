@@ -6,7 +6,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ## 🚀 Features  
 
-![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)  ![GitHub Release](https://img.shields.io/github/v/release/MxpleSticks/PowerKey) 
+![GitHub Release](https://img.shields.io/github/v/release/MxpleSticks/PowerKey)  ![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)
 
 - **Lightning Fast**: Execute commands instantly with customizable keyboard shortcuts  
 - **Easy Configuration**: Set up new shortcuts in seconds with an intuitive interface  
