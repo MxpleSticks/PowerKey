@@ -895,7 +895,7 @@ AAD/wAD//AH////AAP/8Af///8AA//4A////wAD//gD////AAP/+AH///8AA//8Af///wAD//wA/
         settings_window.title(self.language_texts[self.settings['language']]['settings'])
         settings_window.configure(bg=self.colors['bg'])
 
-        window_width = 375
+        window_width = 300
         window_height = 400
         screen_width = settings_window.winfo_screenwidth()
         screen_height = settings_window.winfo_screenheight()
@@ -1158,7 +1158,7 @@ AAD/wAD//AH////AAP/8Af///8AA//4A////wAD//gD////AAP/+AH///8AA//8Af///wAD//wA/
                                 textvariable=self.status_var,
                                 font=('Segoe UI', 9),
                                 foreground='#888888')
-        status_label.pack(pady=(10, 0))
+        status_label.pack(pady=(20, 0))
 
         self.update_hotkeys_list()
 
