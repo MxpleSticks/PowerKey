@@ -1158,7 +1158,7 @@ AAD/wAD//AH////AAP/8Af///8AA//4A////wAD//gD////AAP/+AH///8AA//8Af///wAD//wA/
                                 textvariable=self.status_var,
                                 font=('Segoe UI', 9),
                                 foreground='#888888')
-        status_label.pack(pady=(0, 0))
+        status_label.pack(pady=(10, 0))
 
         self.update_hotkeys_list()
 
