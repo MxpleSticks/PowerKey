@@ -4,20 +4,29 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)
-![Version](https://img.shields.io/badge/version-1.2.1-green.svg)
+![Version](https://img.shields.io/badge/version-1.4.1-green.svg)
+![Stars](https://img.shields.io/github/stars/MxpleSticks/PowerKey.svg?style=social)
 
 ## 🚀 Features
+
+![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)
+![Forks](https://img.shields.io/github/forks/MxpleSticks/PowerKey.svg?style=social)
 
 - **Lightning Fast**: Execute commands instantly with customizable keyboard shortcuts
 - **Easy Configuration**: Set up new shortcuts in seconds with an intuitive interface
 - **Cross-Platform**: Seamless experience across Windows and macOS
 - **Modern UI**: Sleek, dark-themed interface with glass morphism design
 - **Resource Efficient**: Lightweight application with minimal system impact
+- **Multiple Languages**: Choose your preferred language for the UI
+- **Font Customization**: Adjust fonts to match your preferences
+- **Theme Customization**: Personalize your experience with different themes
+- **Import/Export Configurations**: Easily back up and transfer your settings
+- **Window Transparency**: Customize window opacity for a seamless workflow
+- **Enable/Disable Hotkeys**: Toggle specific hotkeys on or off as needed
 
-## 🖥️ very very low quality Demo
+## 🖥️ Demo
 
 ![2025-02-12+22-22-00+(2) (1)](https://github.com/user-attachments/assets/d060f068-ddaa-454e-8a27-a78a81594daa)
-
 
 ## 📥 Installation
 
@@ -30,6 +39,8 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 4. Follow the first-time setup wizard
 
 ## 🛠️ Usage
+
+![Issues](https://img.shields.io/github/issues/MxpleSticks/PowerKey.svg)
 
 1. Launch PowerKey
 2. Press `Ctrl+Shift+Alt` or `Cmd+Shift+Option` + your configured key to trigger actions
@@ -61,5 +72,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to all contributors who have helped shape PowerKey
 - Special thanks to the open-source community
-- 3d assets for Website by [Spline](https://spline.design/)
+- 3D assets for Website by [Spline](https://spline.design/)
 - Icons provided by [Icons8](https://icons8.com/)
