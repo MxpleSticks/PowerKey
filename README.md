@@ -6,7 +6,7 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 
 ## 🚀 Features  
 
-![GitHub Release](https://img.shields.io/github/v/release/MxpleSticks/PowerKey)  ![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)
+![GitHub Release](https://img.shields.io/github/v/release/MxpleSticks/PowerKey)  ![Downloads](https://img.shields.io/github/downloads/MxpleSticks/PowerKey/total.svg)  
 
 - **Lightning Fast**: Execute commands instantly with customizable keyboard shortcuts  
 - **Easy Configuration**: Set up new shortcuts in seconds with an intuitive interface  
@@ -20,9 +20,15 @@ A modern, cross-platform hotkey manager that supercharges your workflow with cus
 - **Window Transparency**: Customize window opacity for a seamless workflow  
 - **Enable/Disable Hotkeys**: Toggle specific hotkeys on or off as needed  
 
-## 🖥️ Demo  
+## 🖥️ very very low quality Demo  
 
-![2025-02-12+22-22-00+(2) (1)](https://github.com/user-attachments/assets/d060f068-ddaa-454e-8a27-a78a81594daa)  
+![2025-02-12+22-22-00+(2) (1)](https://github.com/user-attachments/assets/d060f068-ddaa-454e-8a27-a78a81594daa)
+
+## 🎬 Video Demo  
+
+[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
+
+*Click the image above to watch the full demo on YouTube!*  
 
 ## 📥 Installation  
 
